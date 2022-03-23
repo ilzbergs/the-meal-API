@@ -37,13 +37,13 @@ word-wrap: break-word;
 
 const MealInfo: React.FC<{ data: Post }> = ({ data }) => {
     const { strMeal, strMealThumb, strInstructions} = data;
-    const ingredients = Object.values(data).filter(key => key.includes('strIngredient')).map(key=>data[key]);
+    // const ingredients = Object.values(data).filter(key => key.includes('strIngredient')).map(key=>data[key]);
     return (
         <StyledCard>
             <Title>{strMeal}</Title>
             <Image src={strMealThumb} alt="" />
             <SectionName>Ingredients</SectionName>
-            <Ingredient>{ingredients}</Ingredient>
+            {/* <Ingredient>{ingredients}</Ingredient> */}
             <SectionName>Instructions</SectionName>
             <Instructions>{strInstructions}</Instructions>
         </StyledCard>

@@ -1,16 +1,17 @@
 import { useState } from "react"
 import ContentContainer from "../components/ContentContainer/ContentContainer"
+import Post from "../components/Interfaces/Interfaces"
 import Meals from "../components/Meals/Meals"
 
 const Search: React.FC = () => {
     const [search, setSearch] = useState("")
-    const [meal, setMeal] = useState()
+    const [meal, setMeal] = useState<any[]>()
     const searchMeal = (evt: { key: string }) => {
         if (evt.key === "Enter")
             fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
-                .then(response => response.json())
+                .then(res => res.json())
                 .then(data => { setMeal(data.meals); setSearch("") })
-                
+
 
     }
     return (
@@ -20,9 +21,14 @@ const Search: React.FC = () => {
             </div>
             <div>{
                 (meal == null) ? <p>Not found</p> :
-                    meal.map((res) => {
+                    meal.map((res: Post) => {
                         return (
-                            <Meals data={res} />)
+                            <ContentContainer>
+                                <Meals data={res} />
+
+                            </ContentContainer>
+
+                        )
                     }
 
                     )
