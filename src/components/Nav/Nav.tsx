@@ -45,12 +45,14 @@ const Nav: React.FC = () => {
   
   
   return (
-    <NavBar>
+    <><NavBar>
       <NavLink to="/">Home</NavLink>
-      {/* <Link to="/search">{<Search/>}</Link> */}
      <Search/>
-
     </NavBar>
+     
+   
+  </>
+   
   )
 }
 
