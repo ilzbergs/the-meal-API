@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Search from '../../pages/Search'
 
@@ -33,29 +34,20 @@ const NavLink = styled(Link)`
   }
 `
 
-const SearchField = styled.input`
-  line-height: 3rem;
-  background-color: lightgray;
-  padding-left: 1rem;
-  font-size: 1rem;
-  border: 2px solid #1111;
-`
-
 const Nav: React.FC = () => {
-  
+
   
   return (
     <><NavBar>
       <NavLink to="/">Home</NavLink>
      <Search/>
     </NavBar>
-     
-   
-  </>
-   
+    </>
+
   )
 }
 
 export default Nav
+
 
 
