@@ -47,7 +47,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/category/:categoryName" element={<AllMeals />} />
           <Route path="/meal/:mealName" element={<Meal/>} />
-          <Route path="/search" element={<Search/>} />
+          <Route path="/search/:searcName" element={<Search/>} />
         
 
         </Routes>

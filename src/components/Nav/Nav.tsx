@@ -35,17 +35,17 @@ const NavLink = styled(Link)`
 `
 
 const Nav: React.FC = () => {
-
-  
+    
   return (
     <><NavBar>
       <NavLink to="/">Home</NavLink>
-     <Search/>
+     <Search/> 
     </NavBar>
     </>
 
   )
 }
+
 
 export default Nav
 
