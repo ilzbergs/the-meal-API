@@ -1,10 +1,10 @@
-/* eslint-disable react/jsx-no-undef */
+
 
 import {
   BrowserRouter,
   Route,
   Routes,
- 
+
 }
   from "react-router-dom";
 import './App.css';
@@ -15,11 +15,6 @@ import { createGlobalStyle } from 'styled-components';
 import AllMeals from './pages/AllMeals';
 import Meal from "./pages/Meal";
 import Search from "./pages/Search";
-
-
-
-
-
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -38,18 +33,14 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <>
-
-
       <GlobalStyle />
       <BrowserRouter>
         <Nav />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/category/:categoryName" element={<AllMeals />} />
-          <Route path="/meal/:mealName" element={<Meal/>} />
-          <Route path="/search/:searcName" element={<Search/>} />
-        
-
+          <Route path="/meal/:mealName" element={<Meal />} />
+          <Route path="/search/:searchName" element={<Search />} />
         </Routes>
       </BrowserRouter>
 

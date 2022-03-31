@@ -11,14 +11,15 @@ position: relative;
 margin-bottom:4rem;
 `
 const Title = styled.div`
-background-color: rgba(246, 245, 245, 0.8);
+background-color: rgba(246, 245, 245);
 position: absolute;
-top: 50%;
+top:36rem;
 left: 50%;
 transform: translate(-50%, -50%);
 z-index: 1;
 width: 100%;
 font-size: 2rem;
+
 `
 const Instructions = styled.div`
 width:45rem;

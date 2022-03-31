@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React from 'react'
+import { Link} from 'react-router-dom'
 import styled from 'styled-components'
 import Search from '../../pages/Search'
+
+
 
 const NavBar = styled.header`
   position: absolute;
@@ -10,7 +12,6 @@ const NavBar = styled.header`
   min-width: 25rem;
   border: 2px solid black;
   top: 0;
-  /* margin: auto 0; */
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -35,19 +36,25 @@ const NavLink = styled(Link)`
 `
 
 const Nav: React.FC = () => {
-    
+ 
   return (
-    <><NavBar>
+    
+     
+    <NavBar>
       <NavLink to="/">Home</NavLink>
-     <Search/> 
+     <Search/>
+       
     </NavBar>
-    </>
+  
+  
 
   )
 }
 
 
 export default Nav
+
+
 
 
 

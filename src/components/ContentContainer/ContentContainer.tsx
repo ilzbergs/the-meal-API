@@ -5,10 +5,9 @@ const Container = styled.div`
    width: 100%;
     max-width: 64rem;
     margin: 6rem auto;
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: row;
-    flex: 0 0 33%;
+ display: flex;
+  flex-wrap: wrap;
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
 `
